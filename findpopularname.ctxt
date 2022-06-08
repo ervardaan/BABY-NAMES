@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=findpopularname
+comment1.params=name\ year\ gender
+comment1.target=int\ testpopularname(java.lang.String,\ int,\ java.lang.String)
+comment1.text=public\ int\ testpopularname(String\ name,int\ year,String\ gender)\r\n{\r\n\ \ \ \ String\ filename\="C\:\\\\Users\\\\varda\\\\Downloads\\\\babyNames\\\\data\\\\yob"+year+".csv";\r\n\ \ \ \ FileResource\ f\=new\ FileResource(filename);\r\n\ \ \ \ CSVParser\ p\=f.getCSVParser(false);//when\ no\ header\ is\ given,use\ "false"\r\n\ \ \ \ int\ c\=0;int\ rank\=-1;\r\n\ \ \ \ int\ totalbirthsmale\=0;int\ totalbirthsfemale\=0;\r\n\ \ \ \ for(CSVRecord\ r\:p)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ String\ getname\=r.get(0);\r\n\ \ \ \ \ \ \ \ String\ getgender\=r.get(1);\r\n\ \ \ \ \ \ \ \ c+\=1;\r\n\ \ \ \ \ \ \ \ if(getgender.equals("F"))\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ totalbirthsfemale+\=Integer.parseInt(r.get(2));\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ else{\r\n\ \ \ \ \ \ \ \ \ \ \ \ totalbirthsmale+\=Integer.parseInt(r.get(2));\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ if(getname.equals(name)\ &&\ getgender.equals(gender))\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ rank\=c;\r\n\ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ return\ rank;\r\n}\r\n
+comment2.params=name\ p\ gender
+comment2.target=int\ testpopularnameagain(java.lang.String,\ org.apache.commons.csv.CSVParser,\ java.lang.String)
+comment3.params=year\ rank\ gender
+comment3.target=java.lang.String\ getName(int,\ int,\ java.lang.String)
+comment4.params=name\ gender
+comment4.target=void\ highestInManyYears(java.lang.String,\ java.lang.String)
+comment5.params=name\ p\ gender
+comment5.target=int\ testpopularnameagainagain(java.lang.String,\ org.apache.commons.csv.CSVParser,\ java.lang.String)
+comment6.params=name\ gender
+comment6.target=void\ getTotalBirthsRankedHigher(java.lang.String,\ java.lang.String)
+comment7.params=name\ year\ newyear\ gender
+comment7.target=void\ whatIsNameInYear(java.lang.String,\ int,\ int,\ java.lang.String)
+numComments=8
